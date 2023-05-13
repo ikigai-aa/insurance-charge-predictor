@@ -13,7 +13,7 @@
 # and add symbolic links to their hash values.
 
 my $dir = "C:\\Program Files\\Common Files\\ssl";
-my $prefix = "C:/Users/Win10/Desktop/OneDrive/insurance_charge_predictor/venv\\Library";
+my $prefix = "c:/Users/Win10/Desktop/OneDrive/insurance_charge_predictor/venv\\Library";
 
 my $errorcount = 0;
 my $openssl = $ENV{OPENSSL} || "openssl";
