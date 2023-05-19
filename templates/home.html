@@ -1,0 +1,77 @@
+<html>
+<body>
+    <div class="login">
+       <h1>Insurance Charge Predictor</h1>
+   
+       <form action="{{ url_for('predict_datapoint')}}" method="post">
+        <h1>
+            <legend>Insurance Charge Predictor</legend>
+        </h1>
+        <div class="mb-3">
+            <label class="form-label">Age</label>
+            <input class="form-control" type="number" name="age"
+                placeholder="Enter your age" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Sex</label>
+            <select class="form-control" name="sex" placeholder="Enter you Sex" required>
+                <option class="placeholder" selected disabled value="">Select Sex</option>
+                <option value="female">
+                    female
+                </option>
+                <option value="male">
+                    male
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">BMI</label>
+            <input class="form-control" type="number" name="bmi"
+                placeholder="Enter your children" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Children</label>
+            <input class="form-control" type="number" name="children"
+                placeholder="Enter your children" min='0' max='100' />
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Smoker</label>
+            <select class="form-control" name="smoker" placeholder="Are you smoker?" required>
+                <option class="placeholder" selected disabled value="">Yes/No</option>
+                <option value="yes">
+                    yes
+                </option>
+                <option value="no">
+                    no
+                </option>
+            </select>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label">Region</label>
+            <select class="form-control" name="region" placeholder="Region" required>
+                <option class="placeholder" selected disabled value="">Region</option>
+                <option value="northeast">
+                    northeast
+                </option>
+                <option value="northwest">
+                    northwest
+                </option>
+                <option value="southeast">
+                    southeast
+                </option>
+                <option value="southwest">
+                    southwest
+                </option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input class="btn btn-primary" type="submit" value="Predict charges" required />
+        </div>
+        
+    </form>
+    <h2>
+       THE  prediction is {{results}}
+    </h2>
+   <body>
+</html>
